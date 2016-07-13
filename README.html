@@ -172,8 +172,14 @@ Vol &lt;- function(d, logrets) {
   sqrt(varlist)}</code></pre>
 <hr />
 </div>
-<div id="download-and-load-financial-data" class="section level4">
-<h4>Download and load financial data</h4>
+<div id="perform-estimates-and-plot" class="section level4">
+<h4>Perform Estimates and Plot</h4>
+<pre><code>volest &lt;- Vol(10,SNPret)
+volest2 &lt;- Vol(30,SNPret)
+volest3 &lt;- Vol(100, SNPret)
+plot(volest, type =&quot;1&quot;)
+lines(volest2, type=&quot;1&quot;, col=&quot;red&quot;)
+lines(volest3,type=&quot;1&quot;, col=&quot;blue&quot;)</code></pre>
 </div>
 
 

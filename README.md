@@ -66,5 +66,15 @@ Vol <- function(d, logrets) {
 ```
 
 ****************************
-#### Download and load financial data
+
+#### Perform Estimates and Plot
+
+````
+volest <- Vol(10,SNPret)
+volest2 <- Vol(30,SNPret)
+volest3 <- Vol(100, SNPret)
+plot(volest, type ="1")
+lines(volest2, type="1", col="red")
+lines(volest3,type="1", col="blue")
+````
 
