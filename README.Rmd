@@ -1,6 +1,11 @@
-# 2016-0509 MSDS 6304-401 9.5 Perparing Financial Data
-Bill Kerneckel  
-July 13, 2016  
+---
+title: "2016-0509 MSDS 6304-401 9.5 Perparing Financial Data"
+author: "Bill Kerneckel"
+date: "July 13, 2016"
+output:
+  html_document:
+    keep_md: yes
+---
 
 <br>
 
@@ -29,8 +34,7 @@ Deliverable
 
 In order for the analysis of financial data you must set your working directory to the following:
 
-
-```r
+```{r}
 setwd("/Users/wkerneck/desktop/9.5 Perparing Financial Data/")
 ```
 
@@ -38,8 +42,7 @@ setwd("/Users/wkerneck/desktop/9.5 Perparing Financial Data/")
 
 #### Libraries needed to perform financial analysis
 
-
-```r
+```{r}
 library(tseries)
 ```
 
@@ -47,8 +50,7 @@ library(tseries)
 
 #### Functions needed to perform financial analysis
 
-
-```r
+```{r}
 SNPdata <- get.hist.quote('^gspc',quote="Close")
 SNPret <- log(lag(SNPdata)) - log(SNPdata)
 SNPvol <- sd(SNPret) * sqrt(250) * 100
@@ -66,5 +68,4 @@ Vol <- function(d, logrets) {
 ```
 
 ****************************
-#### Download and load financial data
 
